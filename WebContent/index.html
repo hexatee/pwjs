@@ -39,18 +39,16 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.html" title="Strona główna">Strona główna</a> </li>
                     <li><a href="galeria.html" title="Galeria">Galeria</a></li>
-                    <li><a href="#main-page" title="Pierwsza sekcja">Pierwsza sekcja</a></li> <!-- Ćwiczenie 4. Ad. 4.-->
-                    <li><a href="#secondary-page" title="Druga sekcja">Druga sekcja</a></li> <!-- Ćwiczenie 6. Ad. 2.-->
+                    <li><a href="#main-page" title="Pierwsza sekcja">Pierwsza sekcja</a></li>
+                    <li><a href="#secondary-page" title="Druga sekcja">Druga sekcja</a></li>
+                    <li><a href="kontakt.html" tiltle="Kontakt">Kontakt</a></li> 
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Laboratorium 3. -->
-    <header> <!-- Ćwiczenie 3. Część nagłówkowa z pokazem slajdów --> <!-- Ad. 1. -->
-      <div class="container-fluid"> <!-- Ad. 8. -->
-        <!-- Ad. 2. --> 
-        <div id="carouselID" class="carousel slide" data-ride="carousel"> <!-- Ad. 2. -->
-          <!-- Ad. 3. -->
+    <header>
+      <div class="container-fluid">
+        <div id="carouselID" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselID" data-slide-to="0" class="active"></li>
             <li data-target="#carouselID" data-slide-to="1"></li>
@@ -58,7 +56,6 @@
             <li data-target="#carouselID" data-slide-to="3"></li>
             <li data-target="#carouselID" data-slide-to="4"></li>
           </ol>
-          <!-- Ad. 4. --> <!-- Ad. 7. -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
               <img src="img/1.jpg" alt="img/alt.jpg">
@@ -80,7 +77,6 @@
               <img src="img/5.jpg" alt="img/alt.jpg">
               <div class="carousel-caption">Opis obrazka 5</div>
             </div>
-            <!-- Ad. 5. -->
             <a class="left carousel-control" href="#carouselID" role="button" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               <span class="sr-only">Poprzedni</span> 
@@ -94,9 +90,7 @@
       </div>
     </header>
 
-    <!-- Ćwiczenie 4. Część informacyjna -->
-     <!-- Ad. 1. -->
-    <section id="main-page" class="jumbotron"> <!-- Ad. 2. --> <!-- Ad. 3. -->
+    <section id="main-page" class="jumbotron">
       <div class="container">
         <h1>Pierwsza sekcja strony!</h1>
         <p>
@@ -110,12 +104,11 @@
       </div>
     </section>
 
-    <!-- Ćwiczenie 6. Zadanie samodzielne -->
-    <section id="secondary-page"> <!-- Ad. 1. --> <!-- Ad. 2. -->
+    <section id="secondary-page">
       <div class="container">
-        <div class="row text-center"> <!-- Ad. 5. --> <!-- Ad. 8. -->
+        <div class="row text-center">
           <div class="col-sm-4">
-            <h2 class="text-muted">Druga sekcja</h2> <!-- Ad. 4. -->
+            <h2 class="text-muted">Druga sekcja</h2>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -124,9 +117,8 @@
            Excepteur sint occaecat cupidatat non proident, 
            sunt in culpa qui officia deserunt mollit anim id est laborum."
         </p>
-        <!-- Ad. 6. -->
         <img src="img/logo.png" style="border: 2px solid; border-radius: 50%;">
-        <h3 style="color: red;">Kolumna pierwsza</h3> <!-- Ad. 7. -->
+        <h3 style="color: red;">Kolumna pierwsza</h3>
           </div>
           <div class="col-sm-4">
             <img src="img/logo.png" style="border: 2px solid; border-radius: 50%;">
@@ -136,37 +128,29 @@
             <img src="img/logo.png" style="border: 2px solid; border-radius: 50%;">
             <h3 style="color: blue;">Kolumna trzecia</h3>
           </div>
-        </div>
-        <!-- Ad. 3. -->
-        
+        </div>        
       </div>
     </section>
     <br><br><br>
 
-    <!-- Ćwiczenie 5. Dodawanie stopki -->
-    <footer> <!-- Ad. 1. -->
-      <div class="container"><!-- Ad. 2. --> 
-        <!-- Ad. 3 -->
+    <footer>
+      <div class="container">
         <a href="#window" class="btn btn-success btn-sm" datatoggle="modal" data-target="#myModal">
           Polityka prywatności
         </a>
       </div>
     </footer>
-    <!-- Ad. 4. -->
     <div id="window" class="modal-dialog" role="document">
       <div class="modal-content">
-        <!-- Ad. 5. -->
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span ariahidden="true">&times;</span>
           </button>
           <h4 class="modal-title" id="myModalLabel">Modal title</h4>
         </div>
-        <!-- Ad. 5. -->
         <div class="modal-body">
           ...
         </div>
-        <!-- Ad. 6. -->
         <div class="modal-footer">
           <a href="#" type="button" class="btn btn-default btn-large btn-danger" datadismiss="modal">Close</a>
         </div>

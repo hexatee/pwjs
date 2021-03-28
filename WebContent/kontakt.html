@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     
-
+    <link rel="stylesheet" href="css/contactStyle.css"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     
@@ -21,8 +21,7 @@
     
   </head>
   <body>
-    <h1>Skontaktuj się!</h1>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" 
@@ -44,12 +43,46 @@
             </div>
         </div>
     </nav>
-    <h2>Odnośniki po prawej stronie.</h2>
+    <br><br>
+    <h1>Skontaktuj się!</h1>
+    
+    <form action="kontakt.html" method="post">
+    <fieldset>
+      <legend>Formularz kontaktowy</legend>
+
+      <div class="form-group has-feedback" id="divName"> 
+      <p class="hide" id="errorName">Wymagane imię!</p>
+      <label class="control-label" id="NameLabel" for="contactName">Imię</label>
+      <input type="text" class="form-control" id="contactName" onblur="checkName()"/>
+      <span id="glyphName" class="glyphicon glyphicon-remove form-control-feedback hide" aria-hidden="true"></span>
+      </div>
+
+      <div class="form-group has-feedback" id="divEmail"> 
+        <p class="hide" id="errorEmailIsNull">Wymagany adres e-mail!</p>
+        <p class="hide" id="errorEmailIsIncorrect">Nieprawidłowy adres e-mail!</p>
+      <label class="control-label" id="EmailLabel" for="contactEmail">E-mail</label>
+      <input type="email" class="form-control" id="contactEmail" onblur="checkEmail()"/>
+      <span id="glyphEmail" class="glyphicon glyphicon-remove form-control-feedback hide" aria-hidden="true"></span>
+      </div>
+
+      <div class="form-group has-feedback" id="divMess"> <p class="hide" id="errorMessage">Wiadomość nie może być pusta!</p> 
+      <label class="control-label" id="MessLabel" for="contactMessage">Wiadomość</label>
+      <textarea class="form-control" id="contactMessage" rows="6" onblur="checkMessage()"></textarea>
+      <span id="glyphMess" class="glyphicon glyphicon-remove form-control-feedback hide" aria-hidden="true"></span>
+     </div>
+
+      <input type="submit" class="btn btn-default" value="Wyślij"/>
+    </fieldset>
+
+    </form>
+
+    <script src="js/forms.js"></script>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  
+    
   </body>
 </html>
