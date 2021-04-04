@@ -1,1 +1,49 @@
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #000;
+    background-color: #eee;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+.glyphicon {
+    color: #666;
+}
+
+nav .glyphicon {
+    color: #ddd;
+}
+
+#main-page {
+    background-color: #fff;
+}
+
+.carousel .glyphicon{
+    color: #fff;
+}
+
+.carousel, .carousel-inner, #carouselID {
+    height: 600px;
+    width: 100%;
+}
+
+.nav {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    border: 0px;
+    padding-left: 20px;
+}
+
+.navbar .container-fluid {
+    background-color: black;
+    padding-bottom: 10px;
+}
+
+.navbar-brand img {
+    height: 35px;
+    width: 35px;
+}

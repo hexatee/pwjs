@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Hello</title>
-    <link rel="stylesheet" href="css/style.css">
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     
@@ -21,8 +24,7 @@
     
   </head>
   <body>
-    <h1><br>Strona główna!</h1>
-    <nav class="navbar navbar-inverse navbar-fixed-top"> <!-- Ćwiczenie 4. Ad. 6. -->
+    <nav class="navbar navbar-inverse navbar-fixed-top"> 
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" 
@@ -33,19 +35,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html" title="Strona główna">Strona główna</a> </li>
-                    <li><a href="galeria.html" title="Galeria">Galeria</a></li>
-                    <li><a href="#main-page" title="Pierwsza sekcja">Pierwsza sekcja</a></li>
-                    <li><a href="#secondary-page" title="Druga sekcja">Druga sekcja</a></li>
-                    <li><a href="kontakt.html" tiltle="Kontakt">Kontakt</a></li> 
+                    <li class="active"><a href="index.html" class="btn" title="Strona główna"><span class="glyphicon glyphicon-home"></span> Strona główna</a> </li>
+                    <li><a href="galeria.html" class="btn" title="Galeria"><span class="glyphicon glyphicon-picture"></span> Galeria</a></li>
+                    <li><a href="#main-page" class="btn" title="Pierwsza sekcja"><span class="glyphicon glyphicon-chevron-down"></span> Pierwsza sekcja</a></li>
+                    <li><a href="#secondary-page" class="btn" title="Druga sekcja"><span class="glyphicon glyphicon-chevron-down"></span> Druga sekcja</a></li>
+                    <li><a href="kontakt.html" class="btn" tiltle="Kontakt"><span class="glyphicon glyphicon-earphone"></span> Kontakt</a></li> 
                 </ul>
             </div>
         </div>
     </nav>
+  
     <header>
       <div class="container-fluid">
         <div id="carouselID" class="carousel slide" data-ride="carousel">
@@ -92,7 +95,7 @@
 
     <section id="main-page" class="jumbotron">
       <div class="container">
-        <h1>Pierwsza sekcja strony!</h1>
+        <h1><span class="glyphicon glyphicon-chevron-right"></span>Pierwsza sekcja strony!</h1>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -108,7 +111,7 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-sm-4">
-            <h2 class="text-muted">Druga sekcja</h2>
+            <h2 class="text-muted"><span class="glyphicon glyphicon-chevron-right"></span>Druga sekcja</h2>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
