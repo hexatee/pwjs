@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolioApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,19 +47,27 @@
             </div>
         </div>
     </nav>
-    <section>
+    
+    <section id="galeria" ng-controller="GalleryListCtrl">
       <h1><br><br>Zdjęcia z karuzeli</h1>
-      <img src="img/1.jpg" alt="img/alt.jpg">
-      <img src="img/2.jpg" alt="img/alt.jpg">
-      <img src="img/3.jpg" alt="img/alt.jpg">
-      <img src="img/4.jpg" alt="img/alt.jpg">
-      <img src="img/5.jpg" alt="img/alt.jpg">
-      <img src="img/alt.jpg" alt="img/alt.jpg">
+      <p> Ilość elementów: {{galleries.length}}</p>
+      <div class="row text-center">
+
+        <div class="col-md-4" ng-repeat="gallery in galleries">
+          <img src="{{gallery.thumbnailUrl}}" width=400 style="border: 0px solid; border-radius: 5%;">
+          <p><b>Tytuł: </b>{{gallery.title}}</p><p><b>Data: </b>{{gallery.when | date : 'dd MMMM yyyy'}}</p><p><b>Sekcja: </b>{{gallery.section}}</p>
+          <br>
+        </div>
+
+      </div>
+      
     </section>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
   </body>
 </html>
