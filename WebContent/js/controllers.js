@@ -17,3 +17,4 @@ portfolioApp.controller('GalleryListCtrl', function($scope) {
         }
     ];
 });
+

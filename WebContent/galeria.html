@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Hello</title>
+    <title ng-bind-template="Hello: {{query}}">Hello</title>
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -50,10 +50,39 @@
     
     <section id="galeria" ng-controller="GalleryListCtrl">
       <h1><br><br>Zdjęcia z karuzeli</h1>
-      <p> Ilość elementów: {{galleries.length}}</p>
+      <div class="row">
+        <div class="col-md-4">
+          <p> Ilość elementów: {{galleries.length}}</p>
+        </div>
+        
+        <div class="col-md-4 text-center">
+          <p>Wyszukaj obraz po słowie kluczowym: 
+          </p>
+          <input ng-model="query">
+          <p ng-if="query" style="font-size: 14px;">
+            Wyniki wyszukiwania dla: {{query}}
+          </p>
+        </div>
+        <div class="col-md-2 text-left">
+          <label>Sortuj:</label>
+          <select ng-model="orderProp" class="form-control">
+            <option value="title">Alfabetycznie</option>
+            <option value="when">Chronologicznie</option>
+            <option value="-when">Chronologicznie (odwrotne)</option>
+          </select>
+          <p ng-if="orderProp" style="font-size: 14px;">
+            Galerie ułożone: {{orderProp}}
+          </p>
+        </div>
+      </div>
+      
+      
+      
+      <br><br>
+
       <div class="row text-center">
 
-        <div class="col-md-4" ng-repeat="gallery in galleries">
+        <div class="col-md-4" ng-repeat="gallery in galleries | filter: query | orderBy: orderProp">
           <img src="{{gallery.thumbnailUrl}}" width=400 style="border: 0px solid; border-radius: 5%;">
           <p><b>Tytuł: </b>{{gallery.title}}</p><p><b>Data: </b>{{gallery.when | date : 'dd MMMM yyyy'}}</p><p><b>Sekcja: </b>{{gallery.section}}</p>
           <br>
