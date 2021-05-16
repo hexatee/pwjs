@@ -1,0 +1,9 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+{% for info in informacje %}
+<div><p>{{info.author.username}} napisał/a: <b>{{info.body}}</b></p></div>
+{% endfor %}
+
+{% endblock %}

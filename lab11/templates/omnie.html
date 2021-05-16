@@ -1,0 +1,15 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+{% if tytul %}
+<h1>{{tytul}}</h1>
+{% else %}
+<h1>Strona główna</h1>
+{% endif %}
+<p class="lead">
+{{tresc}}
+</p>
+
+
+{% endblock %}
