@@ -1,0 +1,29 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+{% if tytul %}
+<h1>{{tytul}}</h1>
+{% else %}
+<h1>Strona główna</h1>
+{% endif %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+    <form action = "{{ url_for('dodajrekord') }}" method = "POST">
+    
+        Imię i nazwisko<br>
+        <input type = "text" name = "imienazwisko" /></br>
+    
+        Numer pracownika<br>
+        <input type = "text" name = "nrpracownika" /><br>
+
+        Adres<br>
+        <input type = "text" name = "adres" /><br>
+    
+        <input type = "submit" value = "Zapisz" /><br>
+        </form>
+    </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+{% if tytul %}
+<h1>{{tytul}}</h1>
+{% else %}
+<h1>Strona główna</h1>
+{% endif %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+        <br>
+        <h3>{{ msg }}</h3>
+        <p><a href ="/">Powrót do strony głównej</a></p>
+        <p><a href ="/lista">Przejdź do listy pracowników</a></p>
+    </div>
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+{% if tytul %}
+<h1>{{tytul}}</h1>
+{% else %}
+<h1>Strona główna</h1>
+{% endif %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+        <table border = 1>
+        <thead>
+        <td>Numer pracownika</td>
+        <td>Imię i nazwisko</td>
+        <td>Adres</td>
+        </thead>
+    
+        {% for rekord in rekordy %}
+        <tr>
+        <td>{{rekord["nrpracownika"]}}</td>
+        <td>{{rekord["imienazwisko"]}}</td>
+        <td> {{ rekord["adres"]}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+</main>
+
+
+{% endblock %}
