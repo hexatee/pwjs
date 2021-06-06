@@ -1,0 +1,29 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+{% if tytul %}
+<h1>{{tytul}}</h1>
+{% else %}
+<h1>Strona główna</h1>
+{% endif %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+    <form action = "{{ url_for('login') }}" method = "POST">
+    
+       Login<br>
+        <input type = "text" name = "username" /></br>
+    
+        Hasło<br>
+        <input type = "password" name = "password" /><br>
+    
+        <input type = "submit" value = "Zaloguj" /><br>
+        </form>
+
+
+        <p><br>Przykładowy login i hasło: user1, user1_secret</p>
+    </div>
+</main>
+
+{% endblock %}

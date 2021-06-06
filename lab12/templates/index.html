@@ -4,6 +4,10 @@
 
 <h1>Strona główna</h1>
 <p class="lead">
+    {% if current_user.is_authenticated %}
+        Witaj {{ current_user.name }}!<br>
+    {% endif %}
+
     To jest strona głowna...
     </p>
 
